@@ -1,0 +1,353 @@
+:root {
+    --color1: #1f1f20;
+    --color2: #2b4c7e;
+    --color3: #567ebb;
+    --color4: #606d80;
+    --color5: #dce0e6;
+    --color6: #f7f8f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    color: var(--color5);
+}
+
+.navbar {
+    background-color: var(--color2);
+    color: var(--color5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: var(--color5);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--color3);
+}
+
+.login {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: var(--color2);
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+    list-style: none;
+    padding: 5px 20px;
+}
+
+.submenu li a {
+    color: var(--color5);
+}
+
+.login:hover .submenu {
+    display: block;
+}
+
+.contenido {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.imgInicio {
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--color5);
+    background: linear-gradient(rgba(31, 31, 32, 0.7), rgba(31, 31, 32, 0.7)), /* Overlay oscuro */ url('../img/imgFondoInicio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 300px;
+}
+
+
+.imgInicioh1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.imgInicio p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--color5);
+    /*Menu 1*/
+}
+
+.custom-menu {
+    width: 700px;
+    margin: 80px auto;
+    background: var(--color6);
+    border: 2px solid var(--color2);
+    border-radius: 28px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 48px 0;
+    box-sizing: border-box;
+    margin-bottom: 300px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--color2);
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.15s;
+    border-radius: 18px;
+    padding: 12px 0;
+    user-select: none;
+}
+
+.menu-item .icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.menu-item span {
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 2px;
+}
+
+.menu-item:focus,
+.menu-item:hover {
+    background: #e7ecf3;
+    box-shadow: 0 2px 8px 0 #1d3d6c1a;
+}
+
+.divider {
+    height: 60px;
+    width: 2px;
+    background: #b4bed2;
+    border-radius: 1px;
+}
+
+/*Menu de experiencias*/
+.experiencias-section-bg {
+    width: 100%;
+    position: relative;
+    background-color: var(--color5);
+    padding: 0;
+}
+
+.experiencias-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 0 48px 0;
+}
+
+.experiencias-title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.experiencias-title span {
+    color: #1d3d6c;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.experiencias-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+}
+
+.exp-card {
+    background: white;
+    border: 1.5px solid var(--color2);
+    border-radius: 16px;
+    width: 240px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d3d6c;
+    font-size: 17px;
+    font-weight: 500;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.exp-divider {
+    width: 2.5px;
+    height: 120px;
+    background: var(--color2);
+    border-radius: 2px;
+    align-self: center;
+}
+
+/*fotter*/
+.footer {
+    background-color: var(--color2);
+    color: var(--color5);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: var(--color5);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color3);
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: var(--color4);
+}
+
+/* lo que ya estaba (¿) */
+.contenido-busqueda {
+    margin-top: 100px;
+    padding: 20px 40px;
+}
+
+.buscador {
+    background-color: var(--color4);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.buscador h2 {
+    margin-bottom: 15px;
+    color: var(--color5);
+}
+
+.buscador form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.buscador input,
+.buscador select {
+    padding: 10px;
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid var(--color3);
+    border-radius: 5px;
+    background-color: var(--color1);
+    color: var(--color5);
+}
+
+.buscador button {
+    padding: 10px 20px;
+    background-color: var(--color2);
+    color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    background-color: var(--color3);
+}
+
+.resultados {
+    margin-top: 20px;
+}
+
+.resultados h3 {
+    margin-bottom: 20px;
+    color: var(--color5);
+}
+
+.vacante {
+    background-color: var(--color1);
+    border-left: 5px solid var(--color2);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vacante h4 {
+    margin-bottom: 10px;
+    color: var(--color5);
+}
+
+.vacante p {
+    margin: 5px 0;
+    color: var(--color4);
+}
+
+.vacante a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--color3);
+    text-decoration: underline;
+}
